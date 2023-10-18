@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiSuperSample.Util;
+using Microsoft.Extensions.Logging;
 
 namespace MauiSuperSample
 {
@@ -18,6 +19,8 @@ namespace MauiSuperSample
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton<ReadLocalFile>();
 
             return builder.Build();
         }
