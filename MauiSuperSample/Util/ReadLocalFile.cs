@@ -12,11 +12,13 @@ namespace MauiSuperSample.Util
     {
         public async Task<List<Monkey>> GetMonkeys()
         {
-            //Ler arquivo no resources do projeto
+            //Ler arquivo no resources/Raw do projeto
             using var stream = await FileSystem.OpenAppPackageFileAsync("monkeydata.json");
             using var reader = new StreamReader(stream);
             var contents = await reader.ReadToEndAsync();
             var monkeyList = JsonSerializer.Deserialize<List<Monkey>>(contents);
+
+
 
             return monkeyList;
 
@@ -31,7 +33,6 @@ namespace MauiSuperSample.Util
             //{
             //    this.monkeyService = monkeyService;
             //}
-
         }
     }
 }
