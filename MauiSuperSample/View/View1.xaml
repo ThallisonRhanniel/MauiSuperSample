@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiSuperSample.Viewmodel"
+             x:DataType="viewmodel:View1ViewModel"
+             x:Class="MauiSuperSample.View.View1"
+             Title="View 1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding SayMyName}"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
