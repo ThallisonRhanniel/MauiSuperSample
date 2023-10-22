@@ -1,4 +1,6 @@
 ﻿using MauiSuperSample.Util;
+using MauiSuperSample.View;
+using MauiSuperSample.Viewmodel;
 using Microsoft.Extensions.Logging;
 
 namespace MauiSuperSample
@@ -21,6 +23,12 @@ namespace MauiSuperSample
 #endif
 
             builder.Services.AddSingleton<ReadLocalFile>();
+
+
+            builder.Services.AddTransient<View1ViewModel>();
+
+
+            builder.Services.AddTransient<View1>();
 
             return builder.Build();
         }
