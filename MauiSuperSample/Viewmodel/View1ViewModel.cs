@@ -24,11 +24,7 @@ namespace MauiSuperSample.Viewmodel
         string sayMyName;
 
 
-        public View1ViewModel()
-        {
-            DoSomethingExtensivel().Await(Completed, Fail);
-        }
-
+        public View1ViewModel() => DoSomethingExtensivel().Await(Completed, Fail);
 
         async Task DoSomethingExtensivel()
         {
