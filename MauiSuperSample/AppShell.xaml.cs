@@ -8,6 +8,7 @@ namespace MauiSuperSample
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(View1), typeof(View1));
+            Routing.RegisterRoute(nameof(View2), typeof(View2));
         }
     }
 }

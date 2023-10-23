@@ -26,9 +26,11 @@ namespace MauiSuperSample
 
 
             builder.Services.AddTransient<View1ViewModel>();
+            builder.Services.AddTransient<View2ViewModel>();
 
 
             builder.Services.AddTransient<View1>();
+            builder.Services.AddTransient<View2>();
 
             return builder.Build();
         }

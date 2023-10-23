@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using MauiSuperSample.Util;
+using MauiSuperSample.View;
 using Exception = System.Exception;
 
 
@@ -21,7 +22,7 @@ namespace MauiSuperSample.Viewmodel
         //NotifyCanExecuteChangedFor vai notificar o command executando o CanNavigateView2
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(GoView2Command))] 
-        string sayMyName;
+        string sayMyName = "Heisenberg";
 
 
         public View1ViewModel() => DoSomethingExtensivel().Await(Completed, Fail);
@@ -48,10 +49,7 @@ namespace MauiSuperSample.Viewmodel
 
 
         [RelayCommand(CanExecute = nameof(CanNavigateView2))]
-        void GoView2() 
-        {
-            //Adicionar Navegacão
-        }
+        async Task GoView2() => await Shell.Current.GoToAsync(nameof(View2), true);
 
         private bool CanNavigateView2() => SayMyName == "Heisenberg";
 
